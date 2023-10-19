@@ -1,0 +1,114 @@
+<div  style="margin: auto;" >
+    
+    <div style="background-color: rgb(35, 3, 57) ; color: #f4efef;">
+      <h2 class="card-title"> Alpha Hospital Ltd. </h2>
+      <h5 class="card-title">Patient Appointment Info</h5>
+    </div>
+      <div class="row">
+        <div  class="card col-4">
+          <img src="./assets/def.png" height="220px" width="60px" class="card-img-top" alt="..."> 
+            <div class="card-body">
+              
+              <h5 class="card-title"> ID : {{id}}</h5>
+              <h5 class="card-title">Name : {{name}}</h5>
+              <h5>Gender : {{gender}}</h5>
+              <h5>Age : {{age}}</h5>
+              <h5>Email : {{email}}</h5>
+              <h5>Phone No. : 01724379087</h5>
+             <h5> Address : Pabna</h5>
+           </div>
+          </div>
+          <div class="col-1">
+
+          </div>
+ <div class="col-2">
+      <table class="table table-borderd table-hover">
+        <tbody>
+          
+          <th>Patient </th>
+          <th>      all </th>
+          <th> Information</th>
+          <tr>
+            <td>Patient Id</td>
+             <td>Name</td>
+            <td>Appointment id</td>
+           
+            <td>Serial</td>
+            
+            <td>specialist</td>
+           
+           
+            <td>date</td>
+            <td>fee</td>
+            <td>consultant</td>
+          </tr>
+          <tr *ngFor="let a of list">
+            <td>{{a.userid}}</td>
+            <td>{{a.name}}</td>
+            <td>{{a.id}}</td>
+            
+           
+            <td>{{a.serial}}</td>
+            
+           <td>{{a.specialist}}</td>
+           
+            
+            <td>{{a.date}}</td>
+            <td>{{a.fee}}</td>
+            
+            <td>{{a.consultant}}</td>
+           
+          </tr>
+          <!-- <tr>
+            <td>UserID :</td>
+            <td>{{userid}}</td>
+          </tr>
+          <tr>
+            <td>Serial:</td>
+            <td>{{serial}}</td>
+          </tr>
+          <tr>
+            <td>Name:</td>
+            <td>{{name}}</td>
+          </tr>
+          <tr>
+            <td>Age:</td>
+            <td>{{age}}</td>
+          </tr>
+          <tr>
+            <td>Gender :</td>
+            <td>{{gender}}</td>
+          </tr>
+          <tr>
+            <td>Address:</td>
+            <td>{{address}}</td>
+          </tr>
+          <tr>
+            <td>Specialist:</td>
+            <td>{{specialist}}</td>
+          </tr>
+          <tr>
+            <td>Blood Group:</td>
+            <td>{{blood}}</td>
+          </tr>
+          <tr>
+            <td>Phone Number:</td>
+            <td>{{phone}}</td>
+          </tr>
+          <tr>
+            <td>FollowUp Date:</td>
+            <td>{{date}}</td>
+          </tr>
+          <tr>
+            <td>Fee:</td>
+            <td>{{fee}}</td>
+          </tr>
+          <tr>
+            <td>Consultant:</td>
+            <td>{{consultant}}</td>
+          </tr> -->
+        </tbody>
+      </table>
+    </div>
+    </div>
+  </div>

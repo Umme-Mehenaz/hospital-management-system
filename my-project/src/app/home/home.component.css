@@ -1,0 +1,20 @@
+.a{
+background-image: url('src/assets/2.png');
+background-size: cover;
+width: 1250px;
+height: 800px;
+}
+.navbar navbar-expand-lg bg-body-tertiary{
+    background-color: limegreen;
+    
+    }
+    .h{
+
+color: green;
+
+        }
+        .p{
+
+            color:red;
+            
+                    }

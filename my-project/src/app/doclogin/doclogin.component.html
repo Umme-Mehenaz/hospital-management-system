@@ -1,0 +1,23 @@
+<div class="b">
+    <div class="shadow-lg p-5 mb-5 bg-body rounded-3 w-50" style="margin: auto;">
+        <form (submit)="doclogin()" class="p-3" style="background-color: rgb(23, 125, 125);">
+          <h2 align="center" class="text-warnning"> Doctor Login</h2>
+    
+          <div class="mt-3">
+            <label for="id" class="form-label">Doctor Id:</label>
+            <input type="text" class="form-control" name="doc_id" id="userid" required minlength="5" [(ngModel)]="doc_id">
+</div>
+<div class="mt-3">
+  <label for="id" class="form-label">Password:</label>
+  <input type="password" class="form-control" name="email" id="email" required minlength="5" [(ngModel)]="email">
+</div>
+<div class="mt-3 btn-group form-control" role="group" aria-label="Basic mixed example">
+    <button type="submit" class="form-control btn btn-success m-3"
+      >Login</button>
+      
+  </div>
+          
+         
+        </form>
+      
+      </div>

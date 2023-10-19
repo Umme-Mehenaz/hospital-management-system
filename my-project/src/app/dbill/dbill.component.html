@@ -1,0 +1,100 @@
+<div class="row p-3">
+  <div class="col shadow-lg p-3 mb-5 bg-body rounded-3">
+    <form novalidate #f="ngForm" (submit)="allsave()">
+      <h2 align="center">Patient Bill</h2>
+      <div>
+        <label for="id" class="form-label">Invoice No:</label>
+        <input type="text" class="form-control" name="invoice" id="invoice" [(ngModel)]="billid" #round1="ngModel">
+      </div>
+      <div class="mt-3">
+        <label for="id" class="form-label">ID:</label>
+        <input type="text" class="form-control" name="id" id="id"  [(ngModel)]="id"
+          (keyup)="getidInfo()" #id1="ngModel">
+      </div>
+      
+      <div class="mt-3">
+        <label for="name" class="form-label">Name:</label>
+        <input type="text" class="form-control" name="name" id="name" [(ngModel)]="name" #name1="ngModel" required>
+      </div>
+      <ul *ngIf="name1.dirty && name1.invalid" class="text-danger list-unstyled">
+        <li *ngIf="name1.errors?.['required']">Empty not allowed</li>
+      </ul>
+
+
+      <div>
+        <label for="id" class="form-label">Age:</label>
+        <input type="text" class="form-control" name="age" id="age" [(ngModel)]="age" #round1="ngModel">
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label btn btn-info">Gender</label>
+        <br>
+        <input type="radio" [(ngModel)]="gender" id="Male" name="gender" value="Male">Male
+        <input type="radio" [(ngModel)]="gender" id="Female" name="gender" value="Female">Female
+      </div>
+      <div class="mt-3">
+        <label for="id" class="form-label">Reference:</label>
+        <select [(ngModel)]="consultant" id="tname" name="consultant">
+          <option *ngFor="let s of docref" [value]="s">{{s}}</option>
+        </select>
+      </div>
+      <div class="mt-3">
+        <label for="id" class="form-label">Bill Date:</label>
+        <input type="date" class="form-control" name="bdate" id="bdate" [(ngModel)]="bdate">
+      </div>
+      <div class="mt-3">
+        <label for="id" class="form-label">Test Name:</label>
+        <select [(ngModel)]="tname" id="tname" name="tname" (change)="showTestList()">
+          <option *ngFor="let d of speDNames" [value]="d">{{d}}</option>
+        </select>
+      </div>
+
+      <div class="col">
+        <div class=" shadow-lg p-11 mb-5 ">
+          <h2 align="center">Diagnosis Details</h2>
+          <table class="table table-striped mt-5">
+            <thead class="bg-primary">
+              <th class="a">No of test</th>
+              <th class="a">Test-ID</th>
+              <th class="a">Test Name</th>
+              <th class="a">Price</th>
+
+
+            </thead>
+            <tbody>
+              <tr *ngFor="let x of test; let i = index">
+                <th scope="row">{{i+1}}</th>
+                <td>{{x.tid}}</td>
+                <td>{{x.tname}}</td>
+                <td>{{x.price}}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-3">
+
+          <label for="id" class="form-label">SubTotal:</label>
+          <input type="text" class="form-control" name="subtotal" id="subtotal" [(ngModel)]="subtotal" #id1="ngModel">
+
+        </div>
+        <div class="col-3">
+
+          <label for="id" class="form-label">Discount:</label>
+          <input type="text" class="form-control" name="commision" id="commision" (keyup)="calcTotal()" [(ngModel)]="commision" #id1="ngModel">
+
+        </div>
+        <div class="col-3">
+
+          <label for="id" class="form-label">Total:</label>
+          <input type="text" class="form-control" name="totalbill" id="totalbill" [(ngModel)]="totalbill" #id1="ngModel">
+        </div>
+        <div class="col-3">
+
+          <button type="submit" class="form-control btn btn-success m-3"
+          >Confirm</button></div>
+      </div>
+    </form>
+
+  </div>
+</div>

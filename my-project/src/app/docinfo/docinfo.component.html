@@ -1,0 +1,45 @@
+
+<div class="col">
+    <div class=" shadow-lg p-11 mb-5 ">
+    <h2 align="center">Doctors Details</h2>     
+    <table class="table table-striped mt-5">        
+      <thead class="bg-primary">
+        <th class="a">No Of Patient</th>
+        <th class="a">Serial</th>
+        <th class="a">Doctor ID</th>
+        <th class="a">Doctor Name</th>
+        <th class="a">Specialist</th>
+        <th class="a">Patient Id</th>
+        <th class="a">Patient Name</th>
+        <th class="a">Age</th>
+        <th class="a">Blood Group</th>
+        <th class="a">Gender</th>
+        <th class="a">Phone No</th>
+        <th class="a">Address</th>
+        <th class="a">FollowUpDate</th>
+        <th class="a">UserID</th>
+        
+        
+      </thead>
+      <tbody>
+        <tr *ngFor="let x of list; let i = index">
+          <th scope="row">{{i+1}}</th>
+          <td>{{x.serial}}</td>
+           <td>{{x.doc_id}}</td>
+           <td>{{x.consultant}}</td>
+          <td>{{x.specialist}}</td>
+          <td>{{x.id}}</td>
+          <td>{{x.name}}</td>
+          <td>{{x.age}}</td>
+          <td>{{x.blood}}</td>
+          <td>{{x.gender}}</td>
+          <td>{{x.phone}}</td>
+          <td>{{x.address}}</td>
+          <td>{{x.date}}</td>
+          <td>{{x.userid}}</td>
+          
+        </tr>
+      </tbody>
+      </table>
+  </div>
+  </div>

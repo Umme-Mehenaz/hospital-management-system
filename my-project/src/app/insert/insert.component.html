@@ -1,0 +1,64 @@
+
+
+
+<div class="row p-3">
+    <div class="col shadow-lg p-3 mb-5 bg-body rounded-3">     
+      <form (submit)="saveStudent()" novalidate #f="ngForm" >
+        <h2 align="center">Doctors Form</h2>
+        <div class="mt-3">
+          <label for="id" class="form-label">Doctor ID:</label>
+          <input type="text" class="form-control" name="doc_id" id="doc_id" required minlength="3" [(ngModel)]="doc_id" #id1="ngModel">
+        </div>
+        <ul *ngIf="id1.dirty && id1.invalid" class="text-danger list-unstyled" >
+          <li *ngIf="id1.errors?.['required']">Empty not allowed</li>
+          <li *ngIf="id1.errors?.['minlength']">Minimum 3 charecter</li>
+        </ul>
+        <div class="mt-3">
+          <label for="name" class="form-label">Doctor Name:</label>
+          <input type="text" class="form-control" name="name" id="name" [(ngModel)]="name" #name1="ngModel" required>
+        </div>
+        <ul *ngIf="name1.dirty && name1.invalid" class="text-danger list-unstyled" >
+          <li *ngIf="name1.errors?.['required']">Empty not allowed</li>
+        </ul>
+        
+        <div class="mt-3">
+          <label for="id" class="form-label">Email:</label>
+          <input type="text" class="form-control" name="email" id="email" [(ngModel)]="email"  pattern="^[A-Za-z0-9]+\@[A-Za-z]+\.[A-Za-z]{2,3}$" #email1="ngModel" required>
+        </div>
+        <ul *ngIf="email1.dirty && email1.invalid" class="text-danger list-unstyled" >
+          <li *ngIf="email1.errors?.['required']">Empty not allowed</li>
+         
+          <li *ngIf="email1.errors?.['pattern']">Write a valid email</li>
+        </ul>
+        <div>
+          <label for="id" class="form-label">Specialist:</label>
+          <input type="text" class="form-control" name="specialist" id="specialist" [(ngModel)]="specialist" #round1="ngModel">
+        </div>
+        <div>
+          <label for="id" class="form-label">Experiance:</label>
+          <input type="text" class="form-control" name="experiance" id="experiance" [(ngModel)]="experiance" #round1="ngModel">
+        </div>
+        <div>
+          <label for="id" class="form-label">FollowUp Time :</label>
+          <input type="text" class="form-control" name="followup" id="followup" [(ngModel)]="followup" #round1="ngModel">
+        </div>
+
+        <div>
+          <label for="id" class="form-label">Fee :</label>
+          <input type="text" class="form-control" name="fee" id="fee" [(ngModel)]="fee" #round1="ngModel">
+        </div>
+        <div>
+          <label for="id" class="form-label">Photo:</label>
+          <input type="text" class="form-control" name="img" id="round" [(ngModel)]="img" #round1="ngModel">
+        </div>
+        <div class="mt-3">
+          <button type="submit" class="form-control btn btn-outline-success mt-2" [disabled]="!f.valid">Add</button>
+         
+        </div>
+        
+      </form>
+      <button type="button" class="form-control btn btn-outline-warning mt-2" (click)="updateStudent() ">Update</button>
+      <button type="button" class="form-control btn btn-outline-danger mt-2" (click)="deleteStudent() ">DELETE</button>
+    
+    </div>
+    </div>

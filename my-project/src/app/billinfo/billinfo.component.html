@@ -1,0 +1,134 @@
+<div class="shadow-lg p-5 mb-5 bg-body rounded-3 w-50" style="margin: auto;">
+  <form  class="p-3" >
+   <h2 class="a">Invoice</h2>
+  <h5 >Invoice No : {{invoice.billid}}</h5>
+  <h5 >ID : {{invoice.id}}</h5>
+  <h5 >Name : {{invoice.name}}</h5>
+  <h5 >Refer Doctor : {{invoice.consultant}}</h5>
+  <h5 >Bill Date : {{invoice.bdate}}</h5>
+  
+  <div class="col">
+    <div class=" shadow-lg p-11 mb-5 ">
+      <h2 align="center">Bill Details</h2>
+      <table class="table table-striped mt-5">
+        <thead >
+          <th >No of test</th>
+          <th >Test-ID</th>
+          <th>Test Name</th>
+          <th >Price</th>
+
+
+        </thead>
+        <tbody>
+          <tr *ngFor="let x of invoiceDetails; let i = index">
+            <th scope="row">{{i+1}}</th>
+            <td>{{x.tid}}</td>
+            <td>{{x.tname}}</td>
+            <td>{{x.price}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-4">
+      <h5 >SubTotal : {{invoice.totalbill}}</h5>
+      
+    </div>
+    <div class="col-4">
+      <h5 >Discount : {{invoice.commision}}</h5>
+    </div>
+    <div class="col-4">
+      <h5 >Total : {{invoice.subtotal}}</h5>
+</div>
+    
+  </div>
+  <button (click)="print()">Print</button>
+  </form>
+</div>
+
+
+<!-- <div class="row p-3">
+  <div class="col shadow-lg p-3 mb-5 bg-body rounded-3">
+    <form novalidate #f="ngForm" >
+      <h2 align="center">Bill Invoice</h2>
+      <div>
+        <label for="id" class="form-label">Invoice No:</label>
+        
+        <input type="text" class="form-control" name="invoice.billid" id="invoice" [(ngModel)]="invoice.billid" #round1="ngModel">
+      </div>
+      <div class="mt-3">
+        <label for="id" class="form-label">ID:</label>
+        <input type="text" class="form-control" name="invoice.id" id="invoice.id"  [(ngModel)]="invoice.id"
+           #id1="ngModel">
+      </div>
+      
+      <div class="mt-3">
+        <label for="name" class="form-label">Name:</label>
+        <input type="text" class="form-control" name="invoice.name" id="name" [(ngModel)]="invoice.name" #name1="ngModel" required>
+      </div>
+      <ul *ngIf="name1.dirty && name1.invalid" class="text-danger list-unstyled">
+        <li *ngIf="name1.errors?.['required']">Empty not allowed</li>
+      </ul>
+
+
+      
+      <div class="mt-3">
+        <label for="id" class="form-label">Reference:</label>
+        <input type="text" class="form-control" name="invoice.consultant" id="consultant" [(ngModel)]="invoice.consultant">
+      
+      </div>
+      <div class="mt-3">
+        <label for="id" class="form-label">Bill Date:</label>
+        <input type="date" class="form-control" name="invoice.bdate" id="bdate" [(ngModel)]="invoice.bdate">
+      </div>
+      
+
+      <div class="col">
+        <div class=" shadow-lg p-11 mb-5 ">
+          <h2 align="center">Diagnosis Details</h2>
+          <table class="table table-striped mt-5">
+            <thead class="bg-primary">
+              <th class="a">No of test</th>
+              <th class="a">Test-ID</th>
+              <th class="a">Test Name</th>
+              <th class="a">Price</th>
+
+
+            </thead>
+            <tbody>
+              <tr *ngFor="let x of invoiceDetails; let i = index">
+                <th scope="row">{{i+1}}</th>
+                <td>{{x.tid}}</td>
+                <td>{{x.tname}}</td>
+                <td>{{x.price}}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-3">
+
+          <label for="id" class="form-label">SubTotal:</label>
+          <input type="text" class="form-control" name="invoice.totalbill" id="subtotal" [(ngModel)]="invoice.totalbill" #id1="ngModel">
+
+        </div>
+        <div class="col-3">
+
+          <label for="id" class="form-label">Discount:</label>
+          <input type="text" class="form-control" name="invoice.commision" id="commision" [(ngModel)]="invoice.commision" #id1="ngModel">
+
+        </div>
+        <div class="col-3">
+
+          <label for="id" class="form-label">Total:</label>
+          <input type="text" class="form-control" name="invoice.subtotal" id="totalbill" [(ngModel)]="invoice.subtotal" #id1="ngModel">
+        </div>
+        
+      </div>
+    </form>
+
+  </div>
+</div> -->

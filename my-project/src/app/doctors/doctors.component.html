@@ -1,0 +1,48 @@
+<nav class="navbar navbar-expand-lg bg-primary">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="\home">Home</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        
+        <li class="nav-item">
+          <a class="nav-link" href="\about">Document</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="\contact">Contact</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="\doctors">Find Doctors</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="\patient">Patient Application</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="\administrator">Administrator</a>
+        </li>
+        
+        
+      </ul>
+      
+    </div>
+  </div>
+</nav>
+
+<p>doctors Details!</p>
+<div class="row">
+    <div *ngFor="let x of students;" class="card col-4">
+        <img src="{{x.img}}" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title"> ID : {{x.doc_id}}</h5>
+          <h5 class="card-title">Name : {{x.name}}</h5>
+          <h5>Email : {{x.email}}</h5>
+          <h5>Speciality : {{x.specialist}}</h5>
+          <h5>Experiance : {{x.experiance}}</h5>
+          <h5>FollowUp Time : {{x.followup}}</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <a href="/patient" class="btn btn-primary">Go Appointment</a>
+        </div>
+      </div>
+  </div>

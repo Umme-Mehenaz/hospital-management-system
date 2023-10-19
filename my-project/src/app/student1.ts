@@ -1,0 +1,33 @@
+export class Student1 {
+    id?:any;
+    userid:any;
+    serial?:any;
+    name?:any;
+    age?:any;
+    gender?:any;
+    address?:any;
+    specialist?:any;
+    blood?:any;
+    phone?:any;
+    date?:any;
+    fee?:any;
+    doc_id?:any;
+    consultant?:any;
+    constructor(id:any,userid:any,serial:any,name:any,age:any,gender:any,address:any,specialist:any,blood:any,phone:any,date:any,fee:any,consultant:any,doc_id:any){
+        this.id=id;
+        this.userid=userid;
+        this.serial=serial;
+        this.name=name;
+        this.age=age;
+        this.gender=gender;
+        
+        this.address=address;
+        this.specialist=specialist;
+        this.blood=blood;
+        this.phone=phone;
+        this.date=date;
+        this.fee=fee;
+        this.consultant=consultant;
+        this.doc_id=doc_id;
+    }
+}

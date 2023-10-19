@@ -1,0 +1,62 @@
+<div class="shadow-lg p-5 mb-5 bg-body rounded-3 w-50" style="margin: auto;">
+    <form class="p-3" style="background-color: rgb(238, 245, 245);">
+      <h2 align="center" class="text-success">Hospital Discharge Form</h2>
+
+      <div class="mt-3">
+        <label for="id" class="form-label">Patient ID:</label>
+        <input type="text" class="form-control" name="id" id="id" required minlength="5" [(ngModel)]="id">
+         </div>
+         <div class="mt-3">
+          <label for="userid" class="form-label">Patient Name:</label>
+          <input type="text" class="form-control" name="userid" id="userid" required minlength="5" [(ngModel)]="userid">
+           </div>
+           <div class="row">
+         <div class="mt-3 col-6">
+            <label for="id" class="form-label"> Admission Date:</label>
+            <input type="date" class="form-control" name="serial" id="serial"  [(ngModel)]="serial">
+             </div>
+      
+      <div class="mt-3 col-6">
+        <label for="name" class="form-label">Discharge Date:</label>
+        <input type="date" class="form-control" name="name" id="name"   [(ngModel)]="name">
+      </div>
+    </div>
+
+      <div class="mt-3 ">
+        <label for="email" class="form-label" >Disposition:</label>
+
+            <input type="checkbox" c >
+            <label  >Home </label>
+          
+            <input type="checkbox"  >
+            <label  >Expired </label>
+          
+            <input type="checkbox" >
+            <label  >Nursing Home Transfer</label>
+          </div> 
+      
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label btn btn-info">Discharge Physician</label>
+          <br>
+          <select [(ngModel)]="blood" id="blood" name="blood">
+            <option>Dr. Ahmed Mustafa Zaman</option>
+            <option>Dr. Shamima Sultana</option>
+            <option>Dr. Prince Mahmud</option>
+            <option>Dr. Jubin Jamshed</option>
+            <option>Dr. Abdul Hamid</option>
+            <option>Dr. Shamim Ahmed</option>
+            <option>Dr.Jannatul Ferdous</option>
+            <option>Dr. Khondoker Tina</option>
+          </select>
+          </div>
+       
+
+      <div class="mt-3 btn-group form-control" role="group" aria-label="Basic mixed example">
+        <button type="submit" class="form-control btn btn-success m-3"
+          (click)="showDinvoice()">Confirm</button>
+          
+      </div>
+    
+  
+  
+    

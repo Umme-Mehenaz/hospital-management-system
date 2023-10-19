@@ -1,0 +1,28 @@
+
+
+<div class="col">
+    <div class=" shadow-lg p-11 mb-5 ">
+    <h2 align="center">Diagnosis Details</h2>     
+    <table class="table table-striped mt-5">        
+      <thead class="bg-primary">
+        <th class="a">No of test</th>
+        <th class="a">Test-ID</th>
+        <th class="a">Test Name</th>
+        <th class="a">Price</th>
+       
+        
+      </thead>
+      <tbody>
+        <tr *ngFor="let x of test; let i = index">
+          <th scope="row">{{i+1}}</th>
+          <td>{{x.tid}}</td>
+          <td>{{x.tname}}</td>
+          <td>{{x.price}}</td>
+          
+         
+    
+        </tr>
+      </tbody>
+      </table>
+  </div>
+  </div>
